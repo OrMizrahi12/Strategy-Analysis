@@ -53,7 +53,7 @@ def get_final_conclusion(processed_data: list,money_managment_methods_for_report
             final_df[f"Avg win ({name}) - ({money_managmant_method})"] = win_loss_metrics_df["avg_win"]
             final_df[f"Avg loss ({name}) - ({money_managmant_method})"] = win_loss_metrics_df["avg_loss"]
             final_df[f"Max win ({name}) - ({money_managmant_method})"] = win_loss_metrics_df["max_win"]
-            final_df[f"Max loss ({name}) - ({money_managmant_method})"] = win_loss_metrics_df["max_win"]
+            final_df[f"Max loss ({name}) - ({money_managmant_method})"] = win_loss_metrics_df["max_loss"]
 
 
         # Calculate the UI, UPI, CAGR
