@@ -47,6 +47,15 @@ def get_final_conclusion(processed_data: list,money_managment_methods_for_report
             final_df[f"Monte Carlo Worst Net profit ({name}) - {money_managmant_method}"] = monte_carlo_equity_curve_simulations["worst_scanraio"]
             final_df[f"Monte Carlo Avg Net profit ({name}) - {money_managmant_method}"] = monte_carlo_equity_curve_simulations["avg_scanraio"]
 
+            # RR, win %
+            final_df[f"RR ({money_managmant_method})"] = win_loss_metrics_df["RR"]
+            final_df[f"Win % ({money_managmant_method})"] = win_loss_metrics_df["win_probability"]
+            final_df[f"Avg win ({name}) - ({money_managmant_method})"] = win_loss_metrics_df["avg_win"]
+            final_df[f"Avg loss ({name}) - ({money_managmant_method})"] = win_loss_metrics_df["avg_loss"]
+            final_df[f"Max win ({name}) - ({money_managmant_method})"] = win_loss_metrics_df["max_win"]
+            final_df[f"Max loss ({name}) - ({money_managmant_method})"] = win_loss_metrics_df["max_win"]
+
+
         # Calculate the UI, UPI, CAGR
         ulcer_index_df = calculate_ulcer_index(equity_curves)
         cagr_df = calculate_cagr(equity_curves)                                                  
